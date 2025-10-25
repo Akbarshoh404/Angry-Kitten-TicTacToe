@@ -7,12 +7,11 @@ import androidx.navigation.compose.composable
 import androidx.compose.ui.Modifier
 
 @Composable
-fun NavigationHost(navController: NavHostController, viewModel: GameViewModel, modifier: Modifier) {
+fun NavigationHost(navController: NavHostController, viewModel: GameViewModel) {
     NavHost(navController, startDestination = "splash") {
         composable("splash") { SplashScreen(navController) }
         composable("home") { HomeScreen(navController, viewModel) }
         composable("game") { GameScreen(viewModel, navController) }
         composable("settings") { SettingsScreen(viewModel, navController) }
-        composable("stats") { StatsScreen(viewModel, navController) }
     }
 }
