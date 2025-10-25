@@ -125,7 +125,7 @@ fun GameScreen(viewModel: GameViewModel, navController: NavHostController) {
                     )
                 }
             }
-        }//hello
+        }
 
         if (showDialog && winner != null) {
             AlertDialog(
